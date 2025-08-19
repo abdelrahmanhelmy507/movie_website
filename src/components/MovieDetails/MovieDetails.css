@@ -1,0 +1,111 @@
+.movie-details {
+  padding: 40px;
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.movie-details .poster img {
+  width: 450px;
+  height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.movie-details .poster-info {
+  gap: 8rem;
+}
+
+.movie-details .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+}
+
+.movie-details .poster-info .info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.movie-details .poster-info .info p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+}
+
+.movie-details .info a {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.movie-details .overview h4 {
+  font-size: 28px;
+}
+
+.movie-details .overview p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-bottom: 2rem;
+
+  color: #ccc;
+}
+
+.movie-details .watch-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.movie-details .watch-btn:hover {
+  background: #d62828;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .movie-details .poster-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .movie-details .poster-info .info {
+    width: 100%;
+  }
+
+  .poster img {
+    width: 80%;
+  }
+}
+
+@media (max-width : 1100px) {
+  .movie-details .poster img {
+    width: 350px;
+    height: 70vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .movie-details .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+  }
+
+  .movie-details .poster-info {
+    gap: 2rem;
+  }
+}

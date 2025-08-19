@@ -1,0 +1,80 @@
+/* Card styling - Bootstrap handles the grid layout */
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .poster-imag img {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card .poster {
+  position: relative;
+}
+
+.card .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(34, 34, 34, 0.9);
+  /* Slightly transparent overlay */
+  opacity: 0;
+  transition: .5s;
+  border-radius: 8px;
+  /* Match image border radius */
+}
+
+.card .poster:hover .overlay {
+  opacity: 1;
+  /* Full opacity on hover */
+}
+
+.card .overlay .content {
+  color: white;
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card .overlay .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.88rem;
+}
+
+.card .overlay .content p {
+  margin-bottom: 0.88rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments - Bootstrap Grid handles the main layout */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+
+  .card .poster {
+    aspect-ratio: 2/3;
+    /* Maintain movie poster aspect ratio */
+  }
+
+  .card .overlay .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card .overlay .content p {
+    font-size: 1rem;
+  }
+}
